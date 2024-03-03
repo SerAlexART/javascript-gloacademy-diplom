@@ -1,0 +1,52 @@
+.active {
+    display: block;
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.accordeon > .element > .element-content {
+    display: none;
+}
+
+.accordeon > .element.hidden > .element-content {
+    display: none;
+}
+
+.accordeon > .element.active > .element-content {
+    display: block;
+}
+
+.top-slider > .item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    /* opacity: 0; */
+
+    z-index: 1;
+}
+
+.top-slider > .item.top-slider--active {
+    z-index: 10;
+
+    /* opacity: 1; */
+}
+
+.swiper {
+    overflow: hidden;
+}
+
+/* .services-carousel { */
+.swiper-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* .services-carousel > .swiper-slide { */
+.swiper-slide {
+    flex-shrink: 0;
+}
