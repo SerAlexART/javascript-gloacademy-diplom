@@ -4,7 +4,6 @@ const slicer = (str, num) => {
     return str.trim().length > num ? str.trim().substring(0, num).trim() + '...' : str.trim();
 };
 
-
 const animate = ({ timing, draw, duration }) => {
     let start = performance.now();
 
@@ -24,5 +23,24 @@ const animate = ({ timing, draw, duration }) => {
     });
 };
 
+const toggleClass = (elementClass, className) => {
+    document.querySelector(elementClass).classList.toggle(className);
+};
 
-export { slicer, animate };
+const openModal = (modalClass, nameClass) => {
+    const modal = document.querySelector(modalClass);
+    const overlay = document.querySelector('.modal-overlay');
+
+    overlay.classList.add(nameClass);
+    modal.classList.add(nameClass);
+};
+
+const closeModal = (modalClass) => {
+    const modal = document.querySelector(modalClass);
+    const overlay = document.querySelector('.modal-overlay');
+
+    overlay.classList.remove('.active');
+    modal.classList.remove('.active');
+};
+
+export { slicer, animate, toggleClass, openModal, closeModal };

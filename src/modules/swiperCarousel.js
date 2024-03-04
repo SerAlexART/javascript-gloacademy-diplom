@@ -3,7 +3,7 @@
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 
-const swiper = () => {
+const swiperCarousel = () => {
     const swiper = new Swiper('.swiper', {
         // Optional parameters
         loop: true,
@@ -46,4 +46,4 @@ const swiper = () => {
     });
 };
 
-export default swiper;
+export default swiperCarousel;

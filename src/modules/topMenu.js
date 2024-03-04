@@ -13,20 +13,17 @@ const topMenu = () => {
             e.preventDefault();
 
             if (index === 0) {
-                console.log(e.target.textContent);
                 servicesSection.scrollIntoView({
                     block: "start",
                     behavior: "smooth"
                 });
             } else if (index === 1) {
-                console.log(e.target.textContent);
                 questSection.scrollIntoView({
                     block: "start",
                     behavior: "smooth"
                 });
             }
             else if (index === 2) {
-                console.log(e.target.textContent);
                 contactsSection.scrollIntoView({
                     block: "start",
                     behavior: "smooth"
