@@ -2,7 +2,6 @@
 
 import { openModal } from './helpers';
 
-
 const modalHeader = () => {
     const header = document.querySelector('.header');
 

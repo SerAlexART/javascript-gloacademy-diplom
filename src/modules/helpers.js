@@ -33,6 +33,7 @@ const openModal = (modalClass, nameClass) => {
 
     overlay.classList.add(nameClass);
     modal.classList.add(nameClass);
+
 };
 
 const closeModal = (modalClass) => {
