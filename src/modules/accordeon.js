@@ -13,7 +13,7 @@ const accordeon = () => {
             if (parentTitle.classList.contains('active')) {
                 parentTitle.classList.remove('active');
             } else {
-                accordeonElements.forEach((element, indexElement) => {
+                accordeonElements.forEach((element) => {
                     element.classList.remove('active');
                     parentTitle.classList.add('active');
                 });

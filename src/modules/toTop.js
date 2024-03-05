@@ -20,8 +20,10 @@ const toTop = () => {
 
         if (reactionSectionTop.top <= headerHeight) {
             button.style.display = 'block';
+            button.classList.add('active');
         } else {
             button.style.display = 'none';
+            button.classList.remove('active');
         }
     });
 
