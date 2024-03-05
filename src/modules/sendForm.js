@@ -25,6 +25,22 @@ const sendForm = ({ attibuteForm }) => {
 
     const validateForm = () => {
         console.log(form);
+
+        nameInput.addEventListener('input', (e) => {
+            e.target.value = e.target.value.replace(/[^а-яА-Я\-\ ]+/, '');
+
+            if (e.target.value === e.target.value.replace(/[^а-яА-Я\-\ ]+/, '')) {
+                nameInput.classList.add('success');
+            }
+        });
+
+        phoneInput.addEventListener('input', (e) => {
+            e.target.value = e.target.value.replace(/[^\d\-\+\(\)]/, '');
+
+            if (e.target.value === e.target.value.replace(/[^\d\-\+\(\)]/, '')) {
+                phoneInput.classList.add('success');
+            }
+        });
     };
 
     const validateSend = (list) => {
@@ -101,6 +117,9 @@ const sendForm = ({ attibuteForm }) => {
 
                     nameInput.value = '';
                     phoneInput.value = '';
+
+                    nameInput.classList.remove('success');
+                    phoneInput.classList.remove('success');
 
                     setTimeout(() => {
                         statusBlock.remove();
