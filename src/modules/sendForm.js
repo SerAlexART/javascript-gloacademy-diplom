@@ -1,13 +1,6 @@
 'use strict';
 
 const sendForm = ({ attibuteForm }) => {
-    // Видимость формы для удобства работы
-    const overlay = document.querySelector('.modal-overlay');
-    const modal = document.querySelector('.modal-callback');
-    overlay.classList.add('active');
-    modal.classList.add('active');
-    // Видимость формы для удобства работы
-
     const form = document.querySelector(attibuteForm);
     const nameInput = form.querySelector('[name="fio"]');
     const phoneInput = form.querySelector('[name="tel"]');
@@ -24,12 +17,10 @@ const sendForm = ({ attibuteForm }) => {
     statusBlock.classList.add('f14');
 
     const validateForm = () => {
-        console.log(form);
-
         nameInput.addEventListener('input', (e) => {
             e.target.value = e.target.value.replace(/[^а-яА-Я\-\ ]+/, '');
 
-            if (e.target.value === e.target.value.replace(/[^а-яА-Я\-\ ]+/, '')) {
+            if (e.target.value === e.target.value.replace(/[^а-яА-Я\-\ ]+/, '') && e.target.value !== ' ') {
                 nameInput.classList.add('success');
             }
         });
@@ -37,7 +28,7 @@ const sendForm = ({ attibuteForm }) => {
         phoneInput.addEventListener('input', (e) => {
             e.target.value = e.target.value.replace(/[^\d\-\+\(\)]/, '');
 
-            if (e.target.value === e.target.value.replace(/[^\d\-\+\(\)]/, '')) {
+            if (e.target.value === e.target.value.replace(/[^\d\-\+\(\)]/, '') && e.target.value !== ' ') {
                 phoneInput.classList.add('success');
             }
         });
@@ -74,12 +65,9 @@ const sendForm = ({ attibuteForm }) => {
             success = false;
         }
 
-        list.forEach((input) => {
-            // Проверка навешивания класса на форму. Должна быть отдельная функция и отдельный обработчик события допустим input, которая и будет реализовать навешивание класса и валидацию заполнения
-            // if (!input.classList.contains('success')) {
-            //     success = false;
-            // }
-        });
+        if (!nameInput.classList.contains('success') && !phoneInput.classList.contains('success')) {
+            success = false;
+        }
 
         return success;
     };
