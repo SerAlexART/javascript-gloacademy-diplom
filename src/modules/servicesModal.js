@@ -1,7 +1,6 @@
 'use strict';
 
-import { animate, openModal } from './helpers';
-
+import { openModal } from './helpers';
 
 const servicesModal = () => {
     const servicesCarousel = document.querySelector('.services-carousel');

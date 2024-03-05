@@ -21,6 +21,16 @@
     }
 }
 
+.success {
+    /* color: #2fab6d; */
+    border-color: #2fab6d;
+}
+
+.error {
+    /* color: #ff493a; */
+    border-color: #ff493a;
+}
+
 .hidden {
     display: none;
     opacity: 0;

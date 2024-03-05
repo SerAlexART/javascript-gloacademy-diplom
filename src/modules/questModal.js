@@ -1,6 +1,6 @@
 'use strict';
 
-import { animate, openModal } from './helpers';
+import { openModal } from './helpers';
 
 
 const questModal = () => {

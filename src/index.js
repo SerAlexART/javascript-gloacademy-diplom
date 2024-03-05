@@ -20,6 +20,7 @@ import accordeon from './modules/accordeon';
 import topSlider from './modules/topSlider';
 import swiperCarousel from './modules/swiperCarousel';
 import openMobileMenu from './modules/openMobileMenu';
+import sendForm from './modules/sendForm';
 
 
 
@@ -41,3 +42,4 @@ accordeon();
 topSlider();
 swiperCarousel();
 openMobileMenu();
+sendForm({ attibuteForm: '[name="form-callback"]' });

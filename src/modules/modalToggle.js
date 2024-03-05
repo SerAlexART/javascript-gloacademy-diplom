@@ -1,7 +1,5 @@
 'use strict';
 
-import { animate } from './helpers';
-
 const modalToggle = (buttonClass, modalClass) => {
     const modal = document.querySelector(modalClass);
     const overlay = document.querySelector('.modal-overlay');
